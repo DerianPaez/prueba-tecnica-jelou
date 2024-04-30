@@ -1,5 +1,11 @@
-// eslint-disable-next-line react/prop-types
-export default function ReadingListItem({ image, title, author }) {
+/* eslint-disable react/prop-types */
+
+export default function ReadingListItem({
+  image,
+  title,
+  author,
+  onRemoveReadingList,
+}) {
   return (
     <li className="flex gap-3 items-center">
       <figure className="rounded-md w-10 h-10 grid items-center justify-center">
@@ -9,7 +15,12 @@ export default function ReadingListItem({ image, title, author }) {
         <h2>{title}</h2>
         <p>{author}</p>
       </div>
-      <i>icon</i>
+      <button
+        onClick={onRemoveReadingList}
+        className="bg-delete rounded-lg w-max px-1 py-1 text-white"
+      >
+        del
+      </button>
     </li>
   );
 }

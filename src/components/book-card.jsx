@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-export default function BookCard({ image, title, author }) {
+export default function BookCard({ image, title, author, onAddReadingList }) {
   return (
     <li className="list-none grid gap-3">
       <figure className="h-80">
@@ -10,7 +10,10 @@ export default function BookCard({ image, title, author }) {
           <h2 className="text-secondary text-lg font-bold">{title}</h2>
           <p>{author}</p>
         </div>
-        <button className="bg-secondary text-white px-3 py-1 rounded-lg  w-max">
+        <button
+          onClick={onAddReadingList}
+          className="bg-secondary text-white px-3 py-1 rounded-lg  w-max"
+        >
           Add
         </button>
       </div>

@@ -8,6 +8,7 @@ export default {
       secondary: "#273C69",
       white: "#ffffff",
       black: "#000000",
+      delete: "#ff0000",
     },
   },
   plugins: [],
