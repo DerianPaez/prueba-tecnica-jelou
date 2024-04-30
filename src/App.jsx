@@ -1,7 +1,7 @@
+import Layout from "./components/layout";
+
 function App() {
-  return (
-    <h1 className="text-3xl font-bold underline text-red-600">Hello world!</h1>
-  );
+  return <Layout />;
 }
 
 export default App;
