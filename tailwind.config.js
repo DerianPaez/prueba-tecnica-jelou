@@ -9,6 +9,7 @@ export default {
       white: "#ffffff",
       black: "#000000",
       delete: "#ff0000",
+      brown: "#372416",
     },
   },
   plugins: [],

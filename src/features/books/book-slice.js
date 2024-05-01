@@ -4,7 +4,8 @@ const bookSlice = createSlice({
   name: "books",
   initialState: {
     readingList: [],
-    query: "",
+    genreToFilter: "",
+    genres: [],
   },
   reducers: {
     addBookToReadingList(state, action) {
@@ -17,10 +18,20 @@ const bookSlice = createSlice({
         (book) => book.ISBN !== action.payload.ISBN
       );
     },
+    filterByGenre(state, action) {
+      state.genreToFilter = action.payload;
+    },
+    setGenres(state, action) {
+      state.genres = action.payload;
+    },
   },
 });
 
-export const { addBookToReadingList, removeBookFromReadingList } =
-  bookSlice.actions;
+export const {
+  addBookToReadingList,
+  removeBookFromReadingList,
+  filterByGenre,
+  setGenres,
+} = bookSlice.actions;
 
 export default bookSlice.reducer;
